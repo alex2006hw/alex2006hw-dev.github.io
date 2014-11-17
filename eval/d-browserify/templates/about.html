@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+{% block canonical %}{{ url }}{{ page.url }}{% endblock %}
+{% block title %}{{ page.title }}{% endblock %}
+{% block meta %}
+		{{ super() }}
+		{% if page.metadata.keywords %}<meta name="keywords" content="{{ page.metadata.keywords }}">{% endif %}
+{% endblock %}
+{% block content %}
+		<div class="row">
+			<div class="twelve columns">
+				<article>
+					<figure class="fig_right hide-for-small">
+						<img src="/images/davidSpeaking.jpg" alt="David Tucker speaking at a conference">
+						<figcaption>Photo courtesy of <a href="#">Adam Chow</a></figcaption>
+					</figure>
+					<h1>About David Tucker</h1>
+					<div class="subtitle">{{ page.metadata.subtitle }}</div>
+					{{ page.html }}
+					<figure class="fig_right show-for-small">
+						<img src="/images/davidSpeaking.jpg" alt="David Tucker speaking at a conference">
+						<figcaption>Photo courtesy of <a href="#">Adam Chow</a></figcaption>
+					</figure>
+				</article>
+			</div>
+		</div>
+		<section class="featureBar darkGrey">
+			<div class="row">
+				<div class="twelve columns">
+					<h2 class="light">Writing</h2>
+				</div>
+			</div>
+			<div class="row">
+				<ul class="small-block-grid-2 large-block-grid-6">
+				  <li><div class="list-icon mashable"></div></li>
+				</ul>
+			</div>
+			<div class="row">
+				<div class="twelve columns">
+					<h2 class="light">Speaking</h2>
+				</div>
+			</div>
+			<div class="row">
+				<ul class="small-block-grid-1 large-block-grid-4">
+				  <li><div class="list-icon four-row interop"></div></li>
+				</ul>
+			</div>
+			<div class="row">
+				<ul class="small-block-grid-2 large-block-grid-6">
+				  <li><div class="list-icon six-row fitc"></div></li>
+				</ul>
+			</div>
+		</section>
+{% endblock %}

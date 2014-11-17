@@ -1,0 +1,32 @@
+# to deploy to S3, touch ./data/s3 before running this
+#
+DATE=`/bin/date`;
+
+[ ! -d ./node_modules ] && (
+npm install -g wintersmith;
+npm install wintersmith-tag --save-dev;
+npm install --save-dev;
+)
+
+echo "Development tasks : ";
+echo 'DEPRICATED : grunt wintersmith-preview;';
+rm -rf ./build;
+wintersmith build;
+wintersmith preview;
+
+echo 'DEPRICATED : grunt clean:build; grunt compass:dev;';
+
+echo "Staging tasks : ";
+echo 'DEPRICATED : grunt wintersmith-staging;';
+
+echo "Production tasks : ";
+
+echo "Delopyment tasks :";
+
+echo "ENABLE the following steps to release :";
+
+#[ -d ./alex2006hw.github.io ] && echo "deleting old ./alex2006hw.github.io" && /bin/rm -rf ./alex2006hw.github.io;
+
+#git clone  https://alex2006hw@github.com/alex2006hw/alex2006hw.github.io.git;
+#( cd ./alex2006hw.github.io;/bin/rm -rf *;cp -r ../build/* .;git add -A;git commit -m "Build $DATE";git push );
+
