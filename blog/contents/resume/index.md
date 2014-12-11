@@ -6,12 +6,12 @@ template: article.jade
 ---
                     Alex Davis
                     Email: alex2006hw@gmail.com
-                    phone: (916) 538-1466
+                    phone: (415) 598-8551
 
  
 
 **Objective**
 
-I am not looking.
+A balanced work life environment
 
-[more](/resume/part2.html)
+[more](/resume/alex2006hw.html)

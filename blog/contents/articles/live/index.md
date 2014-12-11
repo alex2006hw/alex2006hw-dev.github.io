@@ -19,4 +19,4 @@ Simple Personal Security
 [more](/articles/live/security)
 
 ### Interesting Sites
-github.com/h5bp : [move the web forward](http://movethewebforward.org/)
+- move the web forward [>>](http://movethewebforward.org/)
