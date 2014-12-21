@@ -1,10 +1,15 @@
 ---
 title: Live
 author: alex2006hw
-date: 2014-11-05
+date: 2014-12-18
 template: article.jade
 comments: false
 ---
+
+### Passion
+
+I have this passion to travel.
+[more](/articles/live/passions)
 
 ### Tuned-out
 
