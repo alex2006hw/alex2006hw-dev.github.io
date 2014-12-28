@@ -1,0 +1,7 @@
+comment="Change is not interesting enough for me to comment or I am too lazy at this time."
+[ ! -z $1 ]  && comment=$1
+
+git pull
+git add -A .
+git commit -m "$comment"
+git push
