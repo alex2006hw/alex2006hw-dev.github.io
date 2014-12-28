@@ -1,0 +1,32 @@
+{
+  "name": "collage",
+  "version": "0.2.2",
+  "description": "Framework for interactive collages",
+  "main": "src/collage.js",
+  "devDependencies": {
+    "boilerplate-gulp": "^0.2.4",
+    "gulp": "^3.8.8"
+  },
+  "scripts": {
+    "test": "echo 0"
+  },
+  "engines": {
+    "node": "~0.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oztu/collage.git"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Ozan Turgut",
+    "email": "ozanturgut@gmail.com",
+    "url": "http://ozan.io"
+  },
+  "licenses": [
+    {
+      "type": "Apache License 2.0",
+      "url": "https://github.com/oztu/collage/blob/master/LICENSE-APACHE2"
+    }
+  ]
+}
