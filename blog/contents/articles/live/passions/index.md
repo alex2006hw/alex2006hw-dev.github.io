@@ -1,12 +1,20 @@
 ---
 title: Passion
 author: alex2006hw
-date: 2014-12-18
+date: 2014-12-29
 template: article.jade
 comments: true
 ---
 
 ### Passion
+
+![businessplan](/images/2bees.jpg)
+
+I am interested in how people connect to each others.  I recently saw on Ted a talk about predictions and it got me to think about building my avatar to assist me with my online life.
+
+## [2bees is born](/articles/live/passions/2bees.html)
+
+2bees is about individual's social connections
 
 ![passion4travel](/images/passion4travel.jpg)
 
@@ -22,31 +30,29 @@ During the 'recession' of 2000's, I've found myself between jobs.  This gave me 
 
 I was happy.  The happiness of ignorance.  It is a close loop feed back system I was in.  Others around me use the same measurement stick and seemed happy.  I was happy.
 
-After this reflection, I found that I was not happy.  I was content.  I was docile.  Life comes at me and I make the best of it.  How well I do is dictated by my stick.
+Upon reflections, I found that I was not happy.  I was content.  I was docile.  Life comes at me and I navigate it according to the measurements of my yard-stick.
 
-With the goverment's support, I've decided to remove money from my measurement.  What I have left was time.  This is novel, this is new, I now have time to live my life.
+I was unhappy with the way I measure my life.  Through some consequences, I was able to remove money from my measurements.  What I have left was time.  This is novel, this is new, I now have time to live my life.
 
 ##### What Am I to do with all this time.
 
-My measurement stick changed and I am lost.  I found that I did not have any passion.  I have been floating through life without any other goal than to make money.  Without this goal, I am lost.
+I need to re-define myself using my new yard-stick.
 
-I need to become un-lost.  I need to re-define myself.  After meditations, I understand that 'I need to understand myself better before I can re-define it.'  Up to now, external drivers control my life, I decided to see if I can reverse that.  I want to see if I can ignore external drivers and live my life.
+I did not worry about money when I was living at home.  My parents took care of that.
 
-I found that I could.  Daily experiences were exhilarating.  I have no master but myself.  My time is my own to do as I like.  Day and night, I do as I please following a single rule:
+I had live life according to a single rule:
 
 - Have fun.  No drama.
 
-I soon found that this is not enough.
-
 ##### Selfish individuals
 
-I found that 'Have fun. No drama' produces selfish people!
+But, I found that 'Have fun. No drama' produces selfish people!
 
-Everything I do, would be guided by this rule.  If it is not fun.  I will not do it.  If it cause negative drama to myself or other, I will not do it.  I have no empathy for others.  I have become selfish.  Something is missing.
+I remember; If it is not fun.  I will not do it.  Negative drama , I will not do it.  I was selfish.  It was all about me.
 
 ##### Rules are needed
 
-I found that I need some guidelines to 'HFND.'  After self examinations, came up with the following rule:
+A rule for more empathy.
 
 > live, learn, grow
 
@@ -54,16 +60,9 @@ I found that I need some guidelines to 'HFND.'  After self examinations, came up
 - learn : reflect on the events from living and try understand them
 - grow : using what I learn to make my life more possitive
 
------------
-IDNR;
+[Measurements](/articles/live/passions/measurements.html) for life!
 
-me understand myself enough to re-define it.
-
-
-it is hard to have both at the same time.
-have been working for someone else
-
-
+-------------
 
 - Why - Reasons for this passion?
 

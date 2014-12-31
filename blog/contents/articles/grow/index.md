@@ -6,5 +6,9 @@ template: article.jade
 comments: false
 ---
 
-# Grow
+# Honesty sharing
+
+I believe that I can better grow through honesty and sharing.  In other words, growing socially in a responsible manner through my connect with others.
+
+
 
