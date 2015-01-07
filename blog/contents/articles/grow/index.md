@@ -8,7 +8,7 @@ comments: false
 
 # Honesty sharing
 
-I believe that I can better grow through honesty and sharing.  In other words, growing socially in a responsible manner through my connect with others.
+I believe that I can better grow through honest sharing.  I intend to grow my connections socially in a responsible manner.
 
 
 

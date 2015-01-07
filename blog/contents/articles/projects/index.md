@@ -1,9 +1,10 @@
 ---
 title: Projects
 author: alex2006hw
-date: 2014-11-04
+date: 2015-01-05
 template: article.jade
 comments: false
 ---
 
+- [2bees](/articles/projects/2bees) connections
 - [ubuntu](/articles/projects/ubuntu-patch) patch management

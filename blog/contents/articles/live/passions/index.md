@@ -8,11 +8,7 @@ comments: true
 
 ### Passion
 
-![businessplan](/images/2bees.jpg)
-
-I am interested in how people connect to each others.  I recently saw on Ted a talk about predictions and it got me to think about building my avatar to assist me with my online life.
-
-## [2bees is born](/articles/live/passions/2bees.html)
+## [2bees is born](/articles/projects/2bees/index.html)
 
 2bees is about individual's social connections
 
