@@ -1,10 +1,16 @@
 ---
 title: Tidbits
 author: alex2006hw
-date: 2014-12-08
+date: 2015-01-15
 template: article.jade
 comments: true
 ---
+
+### Resources
+
+#### eBooks
+- [JavaScripts](http://jsbooks.revolunet.com/) Books
+- [Python](http://pythonbooks.revolunet.com/) Books
 
 #### mysql
 - SELECT User, password, host FROM mysql.user;                                      # show list of users
