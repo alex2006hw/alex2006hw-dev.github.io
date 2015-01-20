@@ -1,7 +1,7 @@
 ---
 title: Projects
 author: alex2006hw
-date: 2015-01-05
+date: 2015-01-19
 template: article.jade
 comments: false
 ---

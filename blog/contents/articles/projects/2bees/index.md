@@ -1,7 +1,7 @@
 ---
 title: 2bees.com
 author: alex2006hw
-date: 2015-01-05
+date: 2015-01-19
 template: article.jade
 comments: true
 ---
@@ -11,7 +11,7 @@ I am interested in how people connect to each others.  I recently saw on Ted a t
 
 ### 2bees.com needs cobjet.com
 
-- cobjet.com is a non profit - avatar is  the source of truth - public access - owner update.  Open Source.  API. web status.
+- [cobjet.com](/articles/projects/2bees/cobjet) is a corporation that foster user's owning their own data.  Then avatar is  the source of truth - public access - owner update.  Open Source.  API. web status.
 
 - 2bees.com manage social online connections.
 
