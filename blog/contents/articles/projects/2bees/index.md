@@ -7,11 +7,3 @@ comments: true
 ---
 ![businessplan](/images/2bees.jpg)
 
-I am interested in how people connect to each others.  I recently saw on Ted a talk about predictions and it got me to think about building my avatar to assist me with my online life.
-
-### 2bees.com needs cobjet.com
-
-- [cobjet.com](/articles/projects/2bees/cobjet) is a corporation that foster user's owning their own data.  Then avatar is  the source of truth - public access - owner update.  Open Source.  API. web status.
-
-- 2bees.com manage social online connections.
-

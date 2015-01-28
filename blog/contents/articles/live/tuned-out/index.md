@@ -8,9 +8,9 @@ comments: true
 
 ### Tuned-out
 
-Is is hard for me to improve my social skills when everyone is so plugged-in and tuned-out.
+I find that it is hard to improve my social skills when everyone is so plugged-in and tuned-out.
 
-- I look around and 'no eye contact!' during my daily commuting.
-- messaging is so easy that my speech patterns are becoming SMS
+- I look around and 'no eye-contact!' during my daily commuting.  Other than the sounds of the train, I can hear a pin drop.
+-- It seems that messaging is the new mode of communication.  In a culture where my tweets is more important that what I say, speaking has less of an apeal.
 
 ![tuned-out](/images/tuned-out.jpg)

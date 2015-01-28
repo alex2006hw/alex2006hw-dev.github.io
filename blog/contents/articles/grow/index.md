@@ -6,9 +6,10 @@ template: article.jade
 comments: false
 ---
 
-# Honesty sharing
+#### Honesty and sharing
 
-I believe that I can better grow through honest sharing.  I intend to grow my connections socially in a responsible manner.
+- What if there is a community with values based on honesty and sharing that uses karma for trades?
 
+##### Let's build a community.
 
 

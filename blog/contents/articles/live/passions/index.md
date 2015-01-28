@@ -18,37 +18,36 @@ I have this passion to travel and I am going to make that my life.
 
 #### It is always time or money.  
 
-Most of my time, I either have the time or money.  The windows where I have time AND money are dimishingly small.  I want to increase this window to the point where it is the majority.
+Most of my time, I either have the time or money.  Lately I found that the windows where I have time AND money are dimishingly small.  I need to change this.
 
-The reason that Time-or-Money (ToM) is a problem for me is because someone else has always been controlling my ToM.
+The reason that Time-or-Money (ToM) is a problem for me is that someone else has always been controlling my ToM.
 
-During the 'recession' of 2000's, I've found myself between jobs.  This gave me the opportunity to re-exam my life.  I've found that there is a direct correllation between time and money in my life.  Most of the time, I have the money but, not the time.  From as far back as I can remember, I have been trained by school-family-society that success in life depends on how much money one has.  I've spent most of my waking hour trying to measure my success by this yard-stick.
+During the 'recession' of 2000's, I've found myself between jobs.  This gave me the opportunity to re-exam my life.  I've found that there is a direct correllation between time and money.  When I was working, I have the money but, not the time!  
+From as far back as I can remember, I have been trained by school-family-society that success in life depends on how much money one has.  I've spent most of my waking hour trying to measure my success by this yard-stick.
 
-I was happy.  The happiness of ignorance.  It is a close loop feed back system I was in.  Others around me use the same measurement stick and seemed happy.  I was happy.
+Happiness of ignorance.  It is a close loop feed back system I was in.  Others around me use the same measurement stick and seemed happy.  I was happy.
 
-Upon reflections, I found that I was not happy.  I was content.  I was docile.  Life comes at me and I navigate it according to the measurements of my yard-stick.
+I was content.  I was docile.  Life comes at me and I navigate it according to my yard-stick.
 
 I was unhappy with the way I measure my life.  Through some consequences, I was able to remove money from my measurements.  What I have left was time.  This is novel, this is new, I now have time to live my life.
 
 ##### What Am I to do with all this time.
 
-I need to re-define myself using my new yard-stick.
-
-I did not worry about money when I was living at home.  My parents took care of that.
-
-I had live life according to a single rule:
-
-- Have fun.  No drama.
+Having worked with Razoo, I believes in TechforGood (TfG).  Let's do something TfG.
 
 ##### Selfish individuals
 
-But, I found that 'Have fun. No drama' produces selfish people!
+Previously, I live life according to a single rule:
 
-I remember; If it is not fun.  I will not do it.  Negative drama , I will not do it.  I was selfish.  It was all about me.
+- Have fun.  No drama.
 
-##### Rules are needed
+But, I found that 'Have fun. No drama' produces selfish people.
 
-A rule for more empathy.
+People who live "Having Fun" while avoiding Drama, become selfish.  All about me!
+
+##### Change is needed
+
+Add a rule for empathy.
 
 > live, learn, grow
 
@@ -62,7 +61,7 @@ A rule for more empathy.
 
 - Why - Reasons for this passion?
 
-- How - Things I need to have do I do this?
+- How - Things I need to do to do this?
 
 - What - My steps to get there?
 
