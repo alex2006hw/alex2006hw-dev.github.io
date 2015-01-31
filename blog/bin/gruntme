@@ -1,0 +1,50 @@
+# to deploy to S3, touch ./data/s3 before running this
+#
+DATE=`/bin/date`;
+
+[ -d ./data ] && (
+npm install -g grunt;
+npm install -g wintersmith;
+npm install wintersmith-tag --save-dev;
+npm install grunt-shell --save-dev;
+npm install grunt-contrib-clean --save-dev;
+npm install grunt-contrib-compass --save-dev;
+npm install grunt-contrib-cssmin --save-dev;
+npm install grunt-contrib-clean --save-dev;
+npm install grunt-wintersmith --save-dev;
+npm install grunt-contrib-jshint --save-dev;
+npm install grunt-browserify2 --save-dev;
+npm install browserify-shim --save-dev;
+npm install grunt-contrib-imagemin --save-dev;
+npm install grunt-line-remover --save-dev;
+npm install grunt-contrib-watch --save-dev;
+npm install grunt-contrib-concat --save-dev;
+npm install grunt-contrib-sass --save-dev;
+npm install grunt-contrib-uglify --save-dev;
+npm install grunt-hashres --save-dev;
+npm install grunt-contrib-cssmin --save-dev;
+npm install grunt-s3 --save-dev;
+npm install --save-dev;
+
+) 
+
+echo "Development tasks : ";
+
+echo grunt preview;
+echo grunt dev;
+
+echo "Staging tasks : ";
+
+echo "Production tasks : ";
+grunt buildProduction;
+
+echo "Delopyment tasks :";
+
+echo "ENABLE the following steps to release :";
+
+echo grunt shell:bumpVersion; 
+echo '[ -f ./data/s3 ] && grunt deploys3Staging; && grunt deployStaging; && grunt deployProduction;';
+
+
+[ -d ./data ] && rm -rf ./data;
+

@@ -1,0 +1,39 @@
+extends layout
+
+block content
+  include author
+  each article, num in articles
+    if num === 0
+      // First article - render in full
+      article.article.intro
+      header
+        h1.indexfullarticle
+          a(href=article.url)= article.title
+        div.date
+          span= moment(article.date).format('DD. MMMM YYYY')
+        p.author
+            mixin author(article.metadata.author)
+      section.content!= typogr(article.html).typogrify()
+    else
+      article.article.intro
+      header
+        h2
+          a(href=article.url)= article.title
+        div.date
+          span= moment(article.date).format('DD. MMMM YYYY')
+        p.author
+            mixin author(article.metadata.author)
+      section.content
+        !{ typogr(article.intro).typogrify() }
+        if article.hasMore
+          p.more
+            a(href=article.url) more
+
+block prepend footer
+  div.nav
+    if prevPage
+      a(href=prevPage.url) « Newer
+    else
+      a(href='/archive.html') « Archives
+    if nextPage
+      a(href=nextPage.url) Next page »
