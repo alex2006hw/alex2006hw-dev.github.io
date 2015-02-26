@@ -1,6 +1,0 @@
-@text = require("./text")
-@video = require("./video")
-@link = require("./link")
-@image = require("./image")
-@book = require("./book")
-@person = require("./person")

@@ -1,7 +1,0 @@
-*.DS_STORE
-*.DS_Store
-node_modules
-_notes
-.env
-firebase.json
-userData

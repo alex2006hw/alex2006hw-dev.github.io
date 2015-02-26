@@ -1,8 +1,0 @@
-.DS_Store
-node_modules
-.built
-static/output
-config/config.json
-config/config-prod.json
-s.jlongster.com
-sv

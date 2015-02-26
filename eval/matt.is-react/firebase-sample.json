@@ -1,5 +1,0 @@
-{
-  "firebase": "MY_FIREBASE_SUBDOMAIN",
-  "public": "public",
-  "rules": "app/security-rules/_compiled.json"
-} 
