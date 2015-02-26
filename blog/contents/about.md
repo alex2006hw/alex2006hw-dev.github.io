@@ -1,7 +1,7 @@
 ---
 title: about
 author: alex2006hw
-date: 2013-12-05
+date: 2015-01-30
 template: article.jade
 ---
 
@@ -13,5 +13,6 @@ template: article.jade
   - [alex2006hw.com](http://alex2006hw.com)
   - [alex@alex2006hw.com](mailto:alex@alex2006hw.com)
   - [tools](/tools)
+  - [recipes](/recipes)
   - [resume](/resume)
 

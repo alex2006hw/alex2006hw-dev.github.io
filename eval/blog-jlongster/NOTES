@@ -1,0 +1,18 @@
+
+* Get host-forwarded-for IP working in nginx logs
+* Make section titles linkable
+* Integrate clustering?
+* Integrate slimerjs for testing, create docker image and somehow run in VM
+* Make page title change
+* Be wiser and use volumes to manage data (especially redis db), and back them up somehow
+
+# Deployment
+
+NODE_ENV=production gulp 6to5
+NODE_ENV=production webpack
+docker build -t jlongster/jlongster4 .
+docker push jlongster/jlongster4
+
+# Tests
+
+mocha --harmony -b -R tap .built/tests/api.js

@@ -1,7 +1,0 @@
-{
-  "id": "raphael",
-  "name": "RaphaelJS",
-  "cssClass": "raphael",
-  "description": "RaphaelJS API" ,
-    "template": "tag.jade"
-}

@@ -1,0 +1,1006 @@
+@import 'nib'
+@import 'mixins'
+global-reset()
+
+linkColor = #9c0001
+lightBackground = rgba(0,0,0,0.03)
+lightBackgroundHover = rgba(0,0,0,0.05)
+lightBackgroundShadow = inset 0 0 1px #d5d5d5
+lightBackgroundShadow = inset 0px 1px 2px #ddd
+lightBackgroundShadowHover = inset 0 0 1px #bbb
+
+paragraphSpacing = 18px
+
+.dynamic-divider-container
+    position relative
+    height 40px
+    text-align center
+    font-size 12px
+    font-family helvetica
+    .dynamic-divider
+        cursor pointer
+        &:hover
+            color white
+
+body
+    background #e7e7e7
+body, input, textarea, select, button
+    font-size 16px
+    font-family georgia
+    line-height 140%    
+.right-col
+    h3
+        font-family 'Georgia'
+        font-weight bold
+        font-size 11px
+        text-transform uppercase
+        margin 13px 0 3px 0
+        color black
+        a:visited
+            color black
+    a
+        color black
+    li a:visited
+        color #777
+    input
+        font-size 14px
+        line-height 14px
+        margin -2px 0 5px 0
+        border none
+        border-bottom 2px solid #ccc
+        background transparent
+        padding 0 0 2px 0
+        width 100%
+        transition(border-color, 0.25s, linear)
+        &:focus
+            border-color #aaa
+            outline none
+            
+
+.right
+    float right
+.clear
+    clear both
+
+
+.content-filter
+    border-bottom 5px solid black
+    position relative
+    display block
+    text-align center
+    margin-bottom 28px
+    // margin-top 50px
+    li
+        display inline
+        margin 0 !important
+    a, a:visited
+        display inline-block
+        z-index 1
+        margin 0 4px
+        position relative
+        color black
+        font-family 'Helvetica Neue', Helvetica, sans-serif
+        font-weight 500
+        font-size 15px
+        line-height 15px
+        padding 0 0 6px
+        display inline-block
+        margin-bottom -10px
+        border-bottom 15px none transparent
+        margin-bottom 5px
+        // transition(border-color, 0.25s, ease-out)
+        // border-width 15px
+        // border-style none
+        // border-color transparent
+        &.activeLink
+            margin-bottom -10px
+            // border-bottom 15px solid #D0021B
+            border-style solid
+            text-decoration none
+            cursor default
+
+        // &.activeLink:after
+        //     display block
+        //     width 100px
+        //     // bottom -10px
+        //     height 5px
+        //     background #D0021B
+        //     // position absolute
+
+lightBackgroundHover()
+    box-shadow none
+    box-shadow 0 1px 2px #ddd
+    background #fafafa
+    text-decoration none
+
+lightBackground()
+    background-color rgba(0,0,0,0.03)
+    box-shadow lightBackgroundShadow
+    // &:hover
+    //     lightBackgroundHover()   
+@keyframes rotateSlowly
+    0%
+        transform(rotate(0deg))
+    100%
+        transform(rotate(360deg))
+a.more-link, a.more-link:visited
+    color #999
+    margin-top 10px
+del
+    opacity 0.5
+    text-decoration strikethrough
+.writing-edit-link
+    font-size: 14px
+    color: #888
+    font-style: italic
+    text-transform: lowercase
+.toggle-hide-true
+    .hide-if-toggle-hidden
+        display none
+.toggle-hide-false
+    .hide-if-toggle-visible
+        display none
+.close-x
+    font-weight bold
+    position absolute
+    top 5px
+    right 5px
+    line-height 100%
+    display inline-block
+    padding 2px
+    &:hover
+        background #eee
+        text-decoration none
+.tag-list
+    li
+        display inline
+        padding-right 15px
+    .tag
+        display inline-block
+        background white
+        font-family 'Helvetica Neue', Helvetica, sans-serif
+        font-size 14px
+        line-height 18px
+        padding 5px 11px
+        border-radius(3px)
+        color #444
+        margin 0 10px 10px 0
+blockquote
+    padding 15px 15px 1px
+    background rgba(0,0,0,0.05)
+    >:last-child
+        margin-bottom 14px
+.writing-body
+    li
+        list-style disc
+    ul, blockquote 
+        padding-left 20px
+    // a, a:visited
+    //     border-bottom 2px solid #ff0057
+    //     color black
+    //     &:hover
+    //         border-color darken(#ff0057, 20)
+    //         text-decoration none
+.writing-inline-options
+    padding 15px
+    margin-bottom: 20px
+    border-bottom 5px solid #ddd
+    background rgba(0,0,0,0.02)
+    position relative
+.writing-date
+    font-style 14px
+    color #777
+.photo-single
+    width 100%
+    height 100%
+    box-sizing border-box
+    background-color black
+    position fixed
+    top 0
+    left 0
+    text-align center
+    padding 30px 0
+    .imageContainer
+        background-position 50% 50%
+        background-size contain
+        background-repeat no-repeat
+        display block
+        width 100%
+        height 100%
+    .paginate-simple
+        position absolute
+        top 50%
+        margin-top -25px
+        a
+            z-index 1
+            box-shadow(none)
+            margin 10px
+            background transparent
+            &.next:after, &:hover.next:after
+                left 18px
+                triangle(35px, 40px, 'right', #777)
+            &.prev:after, &:hover.prev:after
+                right 18px
+                triangle(35px, 40px, 'left', #777)
+
+    img
+        max-width 100%
+        max-height 100%
+.home-photos
+    a
+        margin 5px 10px 5px 0
+        display inline-block
+        img
+            width 120px
+            height 120px
+        
+.photos
+    max-width 960px
+    text-align center
+    margin 0 auto 30px
+    a
+        display inline-block
+        position relative
+        .photo-delete
+            display none
+            width 30px
+            height 30px
+            position absolute
+            opacity 0.5
+            top 35px
+            right 35px
+            content "x"
+            background black
+            color white
+            z-index 1
+            border-radius(15px)
+        &:hover
+            .photo-delete
+                display block
+                &:hover
+                    opacity 1
+                    
+    img
+        // margin 30px
+        margin 5px
+        width 220px
+        height 220px
+        box-shadow(0 0 5px rgba(0,0,0,0.2))
+        &:hover
+            // border 5px solid rgba(0,0,0,0.05)
+            box-shadow(0 0 5px rgba(0,0,0,0.6))
+            // box-shadow(none)
+            // margin 0px
+p, ul, ol, blockquote
+    margin-bottom paragraphSpacing
+// @keyframes around
+//     0%
+//         opacity 1
+//     50%
+//         opacity 0.5
+//     100% 
+//         opacity 1
+helvetica = "Helvetica Neue","Helvetica",sans-serif
+georgia = Georgia, "Times New Roman", Times, serif
+em
+    font-style italic
+strong
+    font-weight bold
+input.error, textarea.error
+    border-bottom 2px solid #ff0057 !important
+.slugPreview
+    opacity 0
+    display inline-block
+.slugInput
+    color #999
+    display inline-block
+    .label
+        cursor default
+input.grey
+    border none
+    background transparent
+    color #777
+    background #e5e5e5
+    padding 0 2px
+    &:hover, &:focus
+        outline none
+        color #333
+        opacity 1
+.slugInput, .slugInput > *
+    font-size 14px
+    font-family georgia
+.btn-dark.loading
+    opacity 0.5
+    cursor default
+    text-decoration none
+    // animation(around 3s infinite)
+    // animation-timing-function(linear)
+
+
+.controls
+    font-family helvetica
+    font-weight 200
+    > a, > .dropdown
+        border-radius(5px)
+        margin-left 15px
+.ideas-controls
+    position fixed
+    bottom 15px
+    right 15px
+
+.btn, .dropdown > a
+    display inline-block
+    padding 6px 10px
+    position relative
+    opacity 1
+    transition(all, 0.2s, linear)
+    border-radius(5px)
+    box-sizing border-box
+    &.disabled
+        opacity 0.5
+        color #777
+        &:hover
+            cursor default
+            text-decoration none
+.btn
+    cursor pointer
+    &:hover
+        text-decoration underline
+    &:active, &:focus
+        outline 0
+        text-decoration underline
+.btn-white
+    font-family helvetica
+    background white
+    border none
+    border-bottom 2px solid #ddd
+    padding 6px 9px
+    text-align center
+    font-size 14px
+    margin-bottom 10px
+    font-weight 500
+.btn-large
+    padding 10px 18px
+.btn.btn-list
+    margin-left 10px
+.btn-block
+    display block
+    margin-bottom 18px
+.btn-small
+    padding 3px 6px
+    font-size 80%
+.btn-standard
+    lightBackground()
+.btn-red
+    background #740524
+    color white
+.btn-dark
+    background #4a4a4a
+    color white
+    &.disabled
+        color #777
+        &:hover
+            cursor default
+            text-decoration none
+.btn-trans
+    color linkColor
+    lightBackground()
+a
+    text-decoration none
+    color linkColor
+    &:hover
+        text-decoration underline
+        cursor pointer
+    &:visited
+        color #c35051
+    &:focus
+        text-decoration underline
+h1, .h1, h2
+    font-size 40px
+    margin 0 0 20px
+    text-align center
+    line-height 120%
+    background transparent
+    display block
+    width 100%
+    border none
+    height auto
+    box-shadow(none)
+    &:focus
+        outline none
+    a, a:visited
+        color black
+h2
+    font-size 30px
+.left-col
+    h3
+        font-size 20px
+        margin-bottom 18px
+
+.text-center
+    text-align center
+.nav-main
+    font-weight 200
+    box-sizing border-box
+    width 100%
+    text-align left
+    padding 0
+    .btn
+        border-radius(0)
+    > .right
+        float right
+        overflow hidden
+        // border-radius(0 0 5px 5px)
+        .btn-block
+            background white
+            margin 7px 7px 0 0
+            box-shadow(0 0 5px rgba(0,0,0,0.1)) 
+        .btn-standard
+            border-left 1px solid #dadada
+
+
+a.activeLink, a.activeLink:hover
+    color #333 
+    // cursor default
+    // text-decoration none
+
+.breadcrumb
+    float left
+    a 
+        color black
+    a:before
+        content: "/"
+        margin 0 4px
+        display inline-block
+        color black
+    a.last-update:before
+        display none
+    a:first-child:before
+        display none
+    a.activeLink
+        color #666
+// .nav-main > .dropdown, .nav-main > a
+//     margin-right 15px
+
+.dropdown
+    position relative
+    box-sizing border-box
+    display inline-block
+    ul
+        overflow hidden
+        opacity 0
+        height 0
+        position absolute
+        padding-top 8px
+        border-radius(5px)
+        transition(opacity, 0.25s, linear)
+        min-width 100%
+        margin 0
+        li
+            background white  
+        a
+            display block
+    li a
+        padding 5px 10px
+        &.activeLink
+            display none
+    &.active
+        ul
+            height auto
+            opacity 1
+    a.selectedDropdownLink
+        position relative
+        box-sizing border-box
+        padding-right 35px
+        lightBackground()
+        display inline-block
+        border-radius(5px)
+    .caret
+        width 26px
+        background rgba(0,0,0,0.05)
+        border-left 1px solid transparent
+        height 100%
+        content "- "
+        text-indent -1000px
+        position absolute
+        top 0
+        right 0
+        overflow hidden
+        border-radius(0 5px 5px 0)
+        &:after
+            position absolute
+            triangle(15px, 12px, 'bottom', rgba(0,0,0,0.1))
+            content "- "
+            text-indent -1000px
+            overflow hidden
+            top 13px 
+            right 6px
+    &:hover .caret
+        cursor pointer
+        &:after
+            triangle(15px, 12px, 'bottom', rgba(0,0,0,0.3))
+
+.paginate-simple
+    float left
+    width 100%
+    margin-bottom 13px
+    a
+        display inline-block
+        width 37px
+        height 40px
+        // lightBackground()
+        border-radius(4px)
+        background white
+        border-bottom 2px solid rgba(0,0,0,0.2)
+        position relative
+        &:after
+            content "- "
+            text-indent -1000px
+            overflow hidden
+            position absolute
+            top 10px
+        &.next:after
+            left 10px
+            triangle(20px, 20px, 'right', #c35051)
+        &:hover.next:after
+            triangle(20px, 20px, 'right', linkColor)
+        &.prev:after
+            right 10px
+            triangle(20px, 20px, 'left', #c35051)
+        &:hover.prev:after
+            triangle(20px, 20px, 'left', linkColor)
+    .next
+        float right
+    .prev
+        float left
+
+.ideas-input
+    transition(border-color, 0.25s, linear)
+    width 100%
+    background transparent
+    margin 0 0 10px
+    padding 3px 0 0 40px
+    font-size 24px
+    border-style none none solid none
+    border-bottom 5px solid #ddd
+    &:focus
+        border-color #bbb
+        // border-color #9c0001
+        outline none
+.idea-preview
+    padding 10
+    background rgba(0,0,0,0.05)
+    width 100%
+    margin-bottom 15px
+    border none
+.idea-body
+    width 100%
+    background transparent
+    border none
+    line-height 140%
+    overflow hidden
+    // margin-bottom 350px
+    // box-sizing border-box
+    position relative
+    // &:before
+    //     content "- "
+    //     text-indent -1000px
+    //     overflow hidden
+    //     height 20px
+    //     background #ccc
+    //     width 5px
+    //     top 0
+    //     left -7px
+    //     position absolute
+    //     display block
+.loader
+    z-index 1
+    animation(rotateSlowly 38s infinite linear)
+    transition(opacity 0.2s linear)
+    display none    
+.loggedOut .showIfUser
+    display none
+.loggedIn .hideIfUser
+    display none
+.loading .loader
+    display block    
+.content
+    
+    >*
+        transition(opacity, 0.2s, linear)
+    // &.loading
+    //     >* 
+    //         opacity 0
+    //     .loader
+    //         opacity 1
+    //         display block
+    //     h1
+    //         opacity 0
+    .content
+        padding 0 0 20px 0
+.textarea-autosize
+    resize none
+    
+    &:focus
+        outline none
+ul.link-list
+    padding-left 0
+    li
+        list-style none
+        position relative
+        padding 2px 0
+            
+    .wordCount
+        position absolute
+        text-align right
+        left -40px
+        width 30px
+        color #777
+        font-size 13px
+        line-height 24px
+ul.writing-list
+    max-width 700px
+    box-sizing border-box
+    margin 0 auto -10px
+    
+    li
+        margin-bottom 5px
+.hidden
+    display none !important
+
+.writingView
+    margin-right 40px
+    // padding 15px
+    hr
+        background transparent
+        border none
+        border-bottom 2px solid #d4d4d4
+    h1
+        // font-size 30px
+        // margin-bottom 15px
+        margin-bottom 11px
+        font-size 24px
+        font-family helvetica
+        font-weight 500
+        text-align left
+.header
+    background #ddd
+    margin-bottom 13px
+    box-sizing border-box
+    h1
+        font-size 40px
+        margin 0
+        a
+            line-height 80px
+            height 80px
+            display block
+.above-header
+    margin 18px 0
+    font-size 16px
+    line-height 16px
+    font-size 14px
+    font-family helvetica
+    font-weight 500
+    background-color #eee
+    padding 7px 9px
+    border-bottom 1px solid #ddd
+
+.content
+    // margin 0 190px 0 18px
+    margin 0 auto
+    max-width 700px
+    &.single-col
+        margin-right 18px
+        // .left-col
+        //     padding 0
+        //     background transparent
+        //     border none
+.left-col
+    box-sizing border-box
+    width 510px
+    padding 0 18px 0
+    float left
+    margin-bottom 18px
+    &:after
+        content " "
+        border-bottom 5px solid black
+        display block
+        padding-top 10px
+.filter-bottom, .left-col:after
+    content: " "
+    clear both
+    display block
+.filter-bottom
+    border-bottom 5px solid black
+.right-col
+    box-sizing border-box
+    font-size 13px
+    line-height 15px
+    color #777
+    padding 18px 18px 0 0
+    float left
+    width 190px
+    margin-bottom 18px
+    ul, .btn-block
+        margin-bottom 13px
+    &:after
+        content " "
+        border-bottom 5px solid black
+        display block
+.left-col .header
+    display none
+.inner-content
+    margin 30px 40px 30px 0
+@media(max-width:700px)
+    .left-col .header
+        display block
+    .right-col .header
+        display none
+    .left-col, .right-col
+        float none
+        width auto
+    .left-col
+        padding 0 18px
+    .right-col
+        padding 0
+        margin 0 18px 18px
+        line-height 17px
+        li
+            display inline-block
+            a
+                margin-right 4px
+            a:after
+                content ","
+            a:last-child:after
+                content ""
+    .header
+        margin 18px 0 13px
+        h1 a
+            height 50px
+            line-height 50px
+            font-size 30px
+    .content-filter
+        margin-top 13px
+    .above-header
+        margin-top 0
+        padding 7px 18px
+        margin 0 -18px
+
+
+@media(max-width:450px)
+    body
+        font-size 100%
+    .content img
+        max-width 100%
+    .content-filter a
+        font-size 14px
+@media(max-width:410px)
+    .content-filter a
+        font-size 13px
+form
+    padding-bottom 1px
+.ideas.link-list
+    margin-left 40px
+.input-message
+    .error
+        display: inline-block
+        background: white
+        margin 0 8px 0 0
+        padding: 0px 8px
+        border-radius: 14px
+        font-size: 13px
+        background: rgb(255, 0, 87)
+        color: white
+.input-subgroup
+    position relative
+    float left
+    background white
+    border-right 1px solid #eee
+    box-sizing border-box
+    &:last-child
+        border-right none
+.input-group-select
+
+    .select-label
+        background #eee
+        border-radius(13px)
+        font-family helvetica
+        font-size 12px
+        font-weight 500
+        padding 2px 10px
+        display inline-block
+        margin 10px 10px 8px 0
+        box-sizing border-box
+        line-height 19px
+        color black
+        &:first-child
+            margin-left 11px
+        &.lastChild
+            margin-right 10px
+        &a:hover
+            cursor pointer
+            text-decoration underline
+        &.selected
+            background rgb(0, 199, 252)
+            color white
+            cursor default
+            text-decoration none !important
+.input-group
+    border-bottom 2px solid #ddd
+    display block
+    padding 0
+    margin-bottom 17px
+    position relative
+    background #fff
+    &.input-group-select
+        background white
+        padding 19px 0 0 0
+    &.input-inline
+        display inline-block
+        vertical-align top
+        margin-right 18px
+
+    &:after
+        clear both
+    &.focus
+        border-color #ccc
+    select
+        border 1px solid #ddd
+        box-sizing border-box
+        height 25px
+        font-size 12px
+        line-height 15px
+        font-weight 500
+        margin 8px 13px 8px 0
+        font-family helvetica
+        &:first-child
+            margin-left 11px
+
+        &:active, &:focus
+            border-color rgb(0, 199, 252)
+            outline 0
+    .input-message
+        background #eee
+        overflow hidden
+        font-family helvetica
+        font-size 13px
+        display none
+        &.active
+            padding 10px
+            display block
+            border-top 1px solid #ddd
+    label, input
+        box-sizing border-box
+        display inline-block
+        line-height: 20px
+        padding 4px 8px
+    .actions, label
+        position absolute
+        top 7px
+        font-family: "Helvetica Neue","Helvetica",sans-serif
+        font-weight 500
+        text-transform uppercase
+        text-align right
+        color #ccc
+        font-size 12px
+        transition(color, 0.2s, ease-out)
+        margin 0
+        padding 0
+    label
+        left 10px
+    .actions
+        right 10px
+        a
+            margin-left 8px     
+    input:focus+label, textarea:focus+label
+        color #999
+    input, textarea
+        margin 0
+        width 100%
+        border none
+        padding 30px 10px 10px 
+        background white
+        font-family georgia
+        font-size 16px
+        &:focus
+            outline 0
+            border-color black
+.form.bare, .input-group.bare
+    .input-group
+        border none
+        input, textarea
+            background transparent
+            padding 30px 0 10px
+            border none
+        label
+            left 0
+        .input-message
+            padding 10px 0
+            background transparent
+    .input-subgroup, .input-group-select
+        background transparent
+        border none
+    select
+        margin-left 0
+.input-single-action
+    margin 30px 10px 10px 10px
+    display block
+    height 22px
+    float left
+.single-purpose
+    a
+        display block
+        height 100%
+        width 100%
+        box-sizing border-box
+        text-align center
+        color black
+        text-decoration none
+        position relative
+        span
+            line-height 100px
+            font-size 100px
+            display block
+            position absolute
+            top 50%
+            margin-top -50px
+            width 100%
+            text-align center
+.left-col 
+    li
+        list-style disc
+        margin-left 20px
+.text-body
+    .part-two
+        display none
+    &.show-more
+        .part-two
+            display block
+        .show-more-trigger
+            display none
+a.edit-content
+    color #777
+    position absolute
+    left 3px
+    width 12px
+    height 12px
+    background #ddd
+    display inline-block
+    &:hover
+        background #000
+.element, .element-container
+    // position relative
+    clear both
+.element-title, .element-title:visited
+    color black
+a.element-permalink
+    color #999
+.element-text 
+    img
+        max-width 100%
+        box-sizing border-box
+.element-person
+    // .element
+    //     background white
+    // box-shadow(0,0,10px,rgba(0,0,0,0.1))
+    .imagePrimary
+        width 100%
+a.show-more-trigger
+    display inline-block
+    font-weight bold
+.left-col hr, .left-col .hr
+    background transparent
+    border none
+    border-top 1px solid #ddd
+    border-bottom 1px solid #eee
+    margin 0 0 18px 0
+    position relative
+    &:before
+        position absolute
+        left 0
+        top 0
+        width 10px
+        height 10px
+        border-radius(10px)
+        background #000
+        display block

@@ -1,7 +1,0 @@
-{
-  "id": "tools",
-  "name": "Tools",
-  "cssClass": "tools",
-  "description": "tools"  ,
-    "template": "tag.jade"
-}

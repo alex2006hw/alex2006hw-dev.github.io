@@ -1,7 +1,7 @@
 ---
 title: Tidbits
 author: alex2006hw
-date: 2015-01-15
+date: 2015-02-25
 template: article.jade
 comments: true
 ---
@@ -11,6 +11,16 @@ comments: true
 #### eBooks
 - [JavaScripts](http://jsbooks.revolunet.com/) Books
 - [Python](http://pythonbooks.revolunet.com/) Books
+
+#### Cool Development tools
+
+#### Tools
+- [Medium.js](http://jakiestfu.github.io/Medium.js) WYSIWYG Editor
+
+##### DB related
+- [medea](https://github.com/medea) a pure JS database 
+
+##### Frame work modules
 
 #### mysql
 - SELECT User, password, host FROM mysql.user;                                      # show list of users

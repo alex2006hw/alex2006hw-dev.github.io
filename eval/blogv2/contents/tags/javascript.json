@@ -1,7 +1,0 @@
-{
-  "id": "javascript",
-  "name": "Javascript",
-  "cssClass": "javascript",
-  "description": "javascript" ,
-    "template": "tag.jade"
-}
