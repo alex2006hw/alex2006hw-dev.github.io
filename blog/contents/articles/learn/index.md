@@ -9,6 +9,7 @@ comments: false
 ### Reflect
 
 > Learning is to make mistakes
+
 [more](/articles/learn/reflects)
 
 - Becoming a [developer](/articles/learn/developer)

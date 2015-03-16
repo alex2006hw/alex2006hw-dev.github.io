@@ -1,0 +1,28 @@
+{
+  "locals": {
+    "url": "http://alex2006hw.github.io",
+    "author": "alex2006hw",
+    "siteName": "Live Learn Grow",
+    "tagline": "know your life",
+    "dateDescriptionFormat": "dddd, MMMM Do YYYY",
+    "defaultOGImage" : "/images/icons/siteIcon-144.png",
+    "robotsDisallowed": "/"
+  },
+  "templates": "./templates",
+  "contents": "./contents",
+  "output": "./build",
+  "require": {
+    "moment": "moment"
+  },
+  "plugins": [
+    "wintersmith-nunjucks",
+    "./plugins/contentHelpers.js"
+  ],
+  "ignore": [
+    "**/config.rb",
+    "**/sass",
+    "**/.sass-cache",
+    "**/.DS_Store",
+    "s3RoutingRules.xml"
+  ]
+}
