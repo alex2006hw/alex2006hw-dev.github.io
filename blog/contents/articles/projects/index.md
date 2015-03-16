@@ -1,7 +1,7 @@
 ---
 title: Projects
 author: alex2006hw
-date: 2015-01-27
+date: 2015-03-13
 template: article.jade
 comments: false
 ---
@@ -14,7 +14,7 @@ comments: false
 #### Current projects
 
 - [2bees](/articles/projects/2bees) connections
-- [idgeod.](/articles/projects/idgeod) online identity
+- [usertoken](/articles/projects/usertoken) online identity
 
 #### On the burner
 
