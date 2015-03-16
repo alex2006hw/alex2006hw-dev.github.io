@@ -1,11 +1,7 @@
 ---
 title: Tidbits
 author: alex2006hw
-<<<<<<< HEAD
 date: 2015-02-25
-=======
-date: 2015-01-15
->>>>>>> e86ede10e057960910de426a9dac800a19705cae
 template: article.jade
 comments: true
 ---
@@ -16,7 +12,6 @@ comments: true
 - [JavaScripts](http://jsbooks.revolunet.com/) Books
 - [Python](http://pythonbooks.revolunet.com/) Books
 
-<<<<<<< HEAD
 #### Cool Development tools
 
 #### Tools
@@ -27,8 +22,6 @@ comments: true
 
 ##### Frame work modules
 
-=======
->>>>>>> e86ede10e057960910de426a9dac800a19705cae
 #### mysql
 - SELECT User, password, host FROM mysql.user;                                      # show list of users
 - UPDATE mysql.user SET Password=PASSWORD('[password]') WHERE User='[username]';    # reset password
