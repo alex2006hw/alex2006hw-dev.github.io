@@ -32,6 +32,7 @@ comments: true
 - [ganeshmax/jcarousellite](https://github.com/ganeshmax/jcarousellite) - jCarousel Lite is a jQuery plugin that carries you on a carousel ride filled with images and HTML content. Put simply, you can navigate images and/or HTML in a carousel-style widget.
 
 ##### Development tools
+  - [ReactJS](https://github.com/reapp/reapp) - framework
   - [CSS URL rewrite](https://github.com/nzakas/cssurl)utility for safely rewriting URLs in CSS code.
 
 #### iOS games
