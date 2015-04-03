@@ -12,7 +12,7 @@ comments: false
 
 [more](/articles/learn/reflects)
 
-- Becoming a [developer](/articles/learn/developer)
+- Becoming a [developer](/articles/learn/dev)
 - Beat this [market](/articles/learn/stocks)
 - Speak better [rails](/articles/learn/rails)
 - What is [devops](/articles/learn/devops)

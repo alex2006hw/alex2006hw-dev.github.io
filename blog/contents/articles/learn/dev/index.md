@@ -1,7 +1,7 @@
 ---
 title: Developer
 author: alex2006hw
-date: 2015-03-12
+date: 2015-03-28
 template: article.jade
 comments: true
 ---
@@ -25,3 +25,5 @@ I have been trying to find interest to help build my robot and it is impossible 
 ### Todo
 [task list](/articles/todo) and todo
 
+### References
+[nodejs mongodb commands](/articles/todo/references) a skeletal boiler plate in javascript
