@@ -46,3 +46,7 @@ comments: false
   - [System Uptime](https://github.com/fzaninotto/uptime)
   - [Gremlin testing](https://github.com/marmelab/gremlins.js) Monkey testing library for web apps and Node.js
   - [Docker AAS](https://github.com/marmelab/gaudi)Gaudi allows to share multi-component applications, based on Docker, Go, and YAML.  http://gaudi.io/
+
+- Understanding myself
+  - [sixteen categories of personalities](http://www.personalitypage.com/html/info.html)
+

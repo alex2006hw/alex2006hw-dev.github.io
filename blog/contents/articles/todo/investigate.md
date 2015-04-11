@@ -46,6 +46,9 @@ comments: true
 
 ##### Cool tools
 
+##### Google
+- [Google scraper](https://github.com/jprichardson/node-google)A Node.js module to search and scrape Google.
+
 ##### fileuploads
 - [How to Upload Files to Node.js Server Using Express Framework](http://www.tutorialindustry.com/how-to-upload-files-to-nodejs-server) - tutorial
 - [Renaming a file with Node.js](http://blog.kevinchisholm.com/javascript/node-js/renaming-a-file-with-node-js/?utm_source=tuicool) - tutorial
@@ -75,6 +78,7 @@ comments: true
 - [lettertwo/Sublime-Monokai-E](https://github.com/lettertwo/Sublime-Monokai-E) - Custom version of the Monokai TextMate theme adapted for use with SublimeText
 
 ##### to review
+- [bitcoins resources](https://github.com/jprichardson)
 https://github.com/hzdg
 https://github.com/ganeshmax/seed-ng-gulp-bower-bootstrap
 https://github.com/stalky14/LocalStorage-Application-Cache
