@@ -55,6 +55,7 @@ export type NavBarLink = {
 	name: string;
 	url: string;
 	external?: boolean;
+	attrs?: Record<string, string | boolean>;
 };
 
 export type NavBarConfig = {

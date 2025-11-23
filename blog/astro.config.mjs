@@ -27,7 +27,7 @@ import fs from "fs";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://fuwari.vercel.app/",
+	site: "https://alex2006hw.github.io/",
 	base: "/",
 	trailingSlash: "always",
 	integrations: [
@@ -156,6 +156,7 @@ export default defineConfig({
 	},
 	vite: {
 		build: {
+			sourcemap: true,
 			rollupOptions: {
 				onwarn(warning, warn) {
 					// temporarily suppress this warning

@@ -6,12 +6,12 @@ description: "false"
 draft: false
 ---
 
-- build an online [identity](/posts/articles/projects/buildrobot/brain/identity)
+- build an online [identity](/posts/articles/projects/buildrobot/brain/identity/)
 -- this online identity shall be the source-of-truth
 -- identity needs anchors: assets, verifiable-owner, socialconnections,
 privateconnections, etc
 
-- build a [neuron](/posts/articles/projects/buildrobot/brain/neuron)
+- build a [neuron](/posts/articles/projects/buildrobot/brain/neuron/)
 -- predict responses to events using correllations
 
 

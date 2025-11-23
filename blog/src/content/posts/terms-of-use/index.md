@@ -2,7 +2,7 @@
 title: Terms of Use
 description: Your guide to all of the terms of using this site and accessing its content
 author: Alex Davis
-published: 2013-10-05
+published: 2010-10-05
 tags: ["copyright","usage","policy","terms of service"]
 changefreq: yearly
 priority: 0.2

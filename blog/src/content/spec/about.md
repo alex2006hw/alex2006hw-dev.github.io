@@ -21,7 +21,8 @@ My journey started in **systems administration and programming**, where I learne
 
 I’ve had the privilege of working across industries — finance, telecom, e-commerce, travel, and government — and each role has reinforced my belief that **security and scalability are inseparable from innovation**. My focus today remains the same as it’s always been: designing systems that are **robust, secure, and future-proof**, while empowering the people who maintain them.
 
-### Ref
-Blog site on Github for [alex2006hw](https://alex2006hw.github.io/).
+### [Github Source](https://github.com/alex2006hw).
 
-::github{repo="alex2006hw/alex2006hw.github.io"}
+::github{repo="alex2006hw"}
+
+### [Terms of Use](/posts/terms-of-use/)

@@ -8,15 +8,15 @@ draft: false
 
 #### Let's build a robot
 
-- [Robot](/posts/articles/projects/buildrobot)
+- [Robot](/posts/articles/projects/buildrobot/)
 
 
 #### Current projects
 
-- [2bees](/posts/articles/projects/2bees) connections
+- [2bees](/posts/articles/projects/2bees/) connections
 
-- [usertoken](/posts/articles/projects/usertoken) online identity
+- [usertoken](/posts/articles/projects/usertoken/) online identity
 
 #### On the burner
 
-- [ubuntu](/posts/articles/projects/ubuntu-patch) patch management
+- [ubuntu](/posts/articles/projects/ubuntu-patch/) patch management

@@ -1,0 +1,3 @@
+[submodule "blog/public/vm"]
+	path = blog/public/vm
+	url = https://github.com/alex2006hw/vm.git
