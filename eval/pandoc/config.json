@@ -1,6 +1,0 @@
-{
-  "plugins": ["wintersmith-pandoc"],
-  "locals": {
-    "title": "Pandoc Example"
-  }
-}

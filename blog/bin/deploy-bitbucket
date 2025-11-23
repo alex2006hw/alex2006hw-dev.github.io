@@ -1,8 +1,0 @@
-DATE=`/bin/date`;
-
-[ -d ./www.alex2006hw.com ] && echo "deleting old ./www.alex2006hw.com" && /bin/rm -rf ./www.alex2006hw.com;
-git clone  https://onztv-inc@bitbucket.org/onztvweb/www.alex2006hw.com.git;
-( cd ./www.alex2006hw.com; rm -rf ./html);
-pwd
-(mv ./build ./www.alex2006hw.com/html);
-(git add -A;git commit -m "Build $DATE";git push );

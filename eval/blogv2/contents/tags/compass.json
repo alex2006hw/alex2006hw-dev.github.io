@@ -1,7 +1,0 @@
-{
-  "id": "compass",
-  "name": "compass",
-  "cssClass": "compass",
-  "description": "compass"  ,
-    "template": "tag.jade"
-}
