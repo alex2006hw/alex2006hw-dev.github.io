@@ -1,0 +1,23 @@
+{
+  "name": "alex2006hw-dev.github.io",
+  "version": "1.0.0",
+  "description": "Personal blog and portfolio website of Alex2006hw",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "(cd blog;npm install)",
+    "build": "(cd blog;npm run build)",
+    "postbuild": "npx shx rm -rf ./dist;npx shx cp -r ./blog/dist ./dist",
+    "start": "(cd blog;npm start)",
+    "clean": "(cd blog;npm run clean)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alex2006hw/alex2006hw-dev.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alex2006hw/alex2006hw-dev.github.io/issues"
+  },
+  "homepage": "https://github.com/alex2006hw/alex2006hw-dev.github.io#readme"
+}

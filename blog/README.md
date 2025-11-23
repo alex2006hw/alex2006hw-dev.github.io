@@ -1,6 +1,10 @@
-# alex2006hw.github.io - Github Page builder
+# Github Page builder using workflow action
 -----
-![🚀 Deploy Status](https://github.com/alex2006hw/alex2006hw.github.io/actions/workflows/deploy.yml/badge.svg?style=for-the-badge)
+
+### 🚀 Deployment Status
+![Main Branch](https://github.com/alex2006hw/alex2006hw.github.io/actions/workflows/deploy.yml/badge.svg?branch=main&style=for-the-badge)
+
+### 🌐 Live Site
 [![🌐 Site Online](https://img.shields.io/badge/🌐%20Site-Online-blue?style=for-the-badge)](https://alex2006hw.github.io/)
 
 Personal blog and portfolio built with **Astro** and **Pagefind** for fast static site generation and search.

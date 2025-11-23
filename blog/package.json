@@ -7,7 +7,6 @@
     "start": "astro dev --host 0.0.0.0 --port 3000",
     "check": "astro check",
     "build": "astro build --sourcemap && pagefind --site ./dist",
-    "postbuild": "npx shx rm -rf ../dist;npx shx cp -r ./dist ../dist",
     "preview": "astro preview",
     "astro": "astro",
     "clean": "npx shx rm -rf ./dist ./.astro",

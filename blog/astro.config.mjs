@@ -23,12 +23,19 @@ import { parseDirectiveNode } from "./src/plugins/remark-directive-rehype.js";
 import { remarkExcerpt } from "./src/plugins/remark-excerpt.js";
 import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
 import { pluginCustomCopyButton } from "./src/plugins/expressive-code/custom-copy-button.js";
-import fs from "fs";
+import tailwind from "@astrojs/tailwind";
+
+// Read ASTRO_BASE from environment (default to "/")
+const base = process.env.ASTRO_BASE || "/";
+
+// Optionally, site can also be dynamic if you want
+const site =
+  process.env.ASTRO_SITE || "https://alex2006hw.github.io/";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://alex2006hw.github.io/",
-	base: "/",
+	site,
+	base,
 	trailingSlash: "always",
 	integrations: [
 		tailwind({
