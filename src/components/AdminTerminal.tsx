@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState, useMemo } from 'react';
 import { Terminal } from 'xterm';
 import { FitAddon } from 'xterm-addon-fit';
@@ -6,14 +5,13 @@ import 'xterm/css/xterm.css';
 import { useDatabase } from '../hooks/useDatabase';
 import _ from 'lodash';
 
-// OS Configs: 'cmdline' is critical for Linux to output to serial
+// OS Configs
 const OS_CONFIGS: any = {
     'linux4': {
         name: 'Linux 4 (Buildroot)',
         cdrom: { url: "/assets/v86/linux4.iso" },
         memory_size: 64 * 1024 * 1024,
         vga_memory_size: 2 * 1024 * 1024,
-        // Force console to serial port 0 (ttyS0)
         cmdline: "console=ttyS0 root=/dev/sr0" 
     },
     'linux3': {
@@ -27,7 +25,6 @@ const OS_CONFIGS: any = {
         name: 'FreeDOS 7.22',
         fda: { url: "/assets/v86/freedos722.img" },
         memory_size: 32 * 1024 * 1024,
-        // FreeDOS writes to VGA by default, serial might be silent without config
     },
     'bzimage': {
         name: 'Buildroot (BzImage)',
@@ -67,9 +64,10 @@ export const AdminTerminal: React.FC = () => {
         const term = new Terminal({ 
             cursorBlink: true, 
             fontSize: 14, 
-            fontFamily: 'monospace', 
+            fontFamily: 'Menlo, Monaco, "Courier New", monospace', // Ensure monospace
             theme: { background: '#111' },
-            convertEol: true // Help parsing Linux \n to \r\n
+            convertEol: true,
+            logLevel: 'off' // Prevents parsing error warnings
         });
         const fitAddon = new FitAddon();
         term.loadAddon(fitAddon);
@@ -94,6 +92,8 @@ export const AdminTerminal: React.FC = () => {
         const startWorker = (t: Terminal) => {
             if (workerRef.current) workerRef.current.terminate();
 
+            // Clear terminal before new boot
+            t.clear(); 
             t.write(`\x1b[32m>>> Booting ${OS_CONFIGS[selectedOS].name}...\x1b[0m\r\n`);
 
             const worker = new Worker("/assets/v86/worker.js");
@@ -103,14 +103,12 @@ export const AdminTerminal: React.FC = () => {
                 const { type, data } = e.data;
 
                 if (type === 'serial') {
-                    t.write(data);
+                    // Safety check for serial data
+                    const output = typeof data === 'string' ? data : new TextDecoder().decode(data);
+                    t.write(output);
                 } 
-                else if (type === 'ready') {
-                    // t.write("\r\n\x1b[32m[System Ready]\x1b[0m\r\n");
-                }
-                else if (type === 'progress') {
-                    // Optional: Show loading bar
-                }
+                else if (type === 'ready') {}
+                else if (type === 'progress') {}
                 else if (type === 'error') {
                     t.write(`\r\n\x1b[31mError: ${data}\x1b[0m\r\n`);
                 }
@@ -119,21 +117,19 @@ export const AdminTerminal: React.FC = () => {
                 }
             };
 
-            // Config for v86 (Serial Only)
             const config = {
                 wasm_path: "/assets/v86/v86.wasm",
                 bios: { url: "/assets/v86/seabios.bin" },
                 vga_bios: { url: "/assets/v86/vgabios.bin" },
-                // Disable browser-side input handling, we pipe it manually
                 disable_mouse: true,
                 disable_keyboard: true, 
                 autostart: true,
+                disable_speaker: true, // Fixes Web Audio API error
                 ...OS_CONFIGS[selectedOS]
             };
             
             worker.postMessage({ cmd: 'init', config });
 
-            // Pipe xterm input -> Worker
             t.onData(input => {
                 worker.postMessage({ cmd: 'input', data: input });
                 setStatus("Active");
@@ -191,7 +187,15 @@ export const AdminTerminal: React.FC = () => {
                 </div>
             </div>
             
-            <div style={{ flex: 1, background: 'black', padding: 10, position: 'relative', minHeight: 0 }}>
+            {/* FIX: Added textAlign: 'left' to force console text to the left side */}
+            <div style={{ 
+                flex: 1, 
+                background: 'black', 
+                padding: 10, 
+                position: 'relative', 
+                minHeight: 0,
+                textAlign: 'left' 
+            }}>
                 <div ref={terminalRef} style={{ height: '100%', width: '100%' }}></div>
             </div>
         </div>

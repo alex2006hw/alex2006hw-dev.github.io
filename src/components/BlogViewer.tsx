@@ -1,6 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useDatabase } from '../hooks/useDatabase';
+
+// Helper to convert Markdown links [text](url) to HTML <a> tags
+const parseText = (text: string) => {
+    return text.replace(
+        /\[([^\]]+)\]\(([^)]+)\)/g, 
+        '<a href="$2" target="_blank" rel="noopener noreferrer" style="color: #00aaff; text-decoration: none;">$1</a>'
+    );
+};
 
 export const BlogViewer: React.FC<{ node: any; onClose: () => void }> = ({ node, onClose }) => {
     const { details, id } = node;
@@ -16,6 +24,60 @@ export const BlogViewer: React.FC<{ node: any; onClose: () => void }> = ({ node,
 
     const existingComments = details.comments || [];
 
+    // --- CONTENT PARSING LOGIC ---
+    const contentBlocks = useMemo(() => {
+        try {
+            // 1. Attempt to parse JSON string if it is a string
+            const raw = typeof details.content === 'string' ? JSON.parse(details.content) : details.content;
+            
+            // 2. Check if it fits the Editor.js structure (has "blocks")
+            if (raw && Array.isArray(raw.blocks)) {
+                return raw.blocks.map((block: any, index: number) => {
+                    // Safe html parsing for links inside text
+                    const htmlContent = block.data?.text ? parseText(block.data.text) : "";
+
+                    switch (block.type) {
+                        case 'header':
+                            // FIX: Use React.ElementType for dynamic tag
+                            const level = block.data.level || 3;
+                            const HeaderTag = `h${level}` as React.ElementType;
+                            return (
+                                <HeaderTag 
+                                    key={index} 
+                                    style={{ color: '#fff', marginTop: '20px', marginBottom: '10px' }}
+                                    dangerouslySetInnerHTML={{ __html: htmlContent }} 
+                                />
+                            );
+                        case 'paragraph':
+                            return (
+                                <p 
+                                    key={index} 
+                                    style={{ marginBottom: '15px' }}
+                                    dangerouslySetInnerHTML={{ __html: htmlContent }}
+                                />
+                            );
+                        case 'list':
+                            const ListTag = block.data.style === 'ordered' ? 'ol' : 'ul';
+                            return (
+                                <ListTag key={index} style={{ paddingLeft: '20px', marginBottom: '15px' }}>
+                                    {block.data.items.map((item: string, i: number) => (
+                                        <li key={i} dangerouslySetInnerHTML={{ __html: parseText(item) }} />
+                                    ))}
+                                </ListTag>
+                            );
+                        default:
+                            return null;
+                    }
+                });
+            }
+            // Fallback: It's just a plain string
+            return <p>{String(details.content)}</p>;
+        } catch (e) {
+            // Error Fallback: Return raw string if JSON parse failed
+            return <p>{String(details.content)}</p>;
+        }
+    }, [details.content]);
+
     const handleSubmit = async () => {
         if(!comment.trim()) return;
         const dbId = id.toString().replace('post_', '');
@@ -24,14 +86,11 @@ export const BlogViewer: React.FC<{ node: any; onClose: () => void }> = ({ node,
         if (worker) {
             try {
                 await worker.exec(sql);
-                alert("Comment submitted for review.");
-                
-                // Clear draft on success
+                console.log("Comment submitted for review.");
                 setComment("");
                 localStorage.removeItem('draft_comment');
             } catch(e) {
                 console.warn("SQL Error:", e);
-                alert("Submission failed (Read-Only Mode?)");
             }
         }
     };
@@ -54,10 +113,33 @@ export const BlogViewer: React.FC<{ node: any; onClose: () => void }> = ({ node,
                     </div>
                     
                     <div style={{ margin: '20px 0', borderRadius: '12px', overflow: 'hidden', border: '1px solid #222' }}>
-                        {details.media_type === 'image' ? <img src={details.media_url} alt="Asset" crossOrigin="anonymous" style={{ width: '100%' }} /> : <video src={details.media_url} controls crossOrigin="anonymous" style={{ width: '100%' }} />}
+                        {/* {details.media_type === 'image' ? <img src={details.media_url} alt="Asset" crossOrigin="anonymous" style={{ width: '100%' }} /> : <video src={details.media_url} controls crossOrigin="anonymous" style={{ width: '100%' }} />} */}
+                        {/* FIX: Only render media block if a URL actually exists */}
+                        {details.media_url && (
+                            <div style={{ margin: '20px 0', borderRadius: '12px', overflow: 'hidden', border: '1px solid #222' }}>
+                                {details.media_type === 'image' ? (
+                                    <img 
+                                        src={details.media_url} 
+                                        alt="Asset" 
+                                        crossOrigin="anonymous" 
+                                        style={{ width: '100%' }} 
+                                    />
+                                ) : (
+                                    <video 
+                                        src={details.media_url} 
+                                        controls 
+                                        crossOrigin="anonymous" 
+                                        style={{ width: '100%' }} 
+                                    />
+                                )}
+                            </div>
+                        )}
                     </div>
 
-                    <div style={{ lineHeight: '1.8', color: '#ddd', fontSize: '1.1rem', marginBottom: '40px' }}>{details.content}</div>
+                    <div style={{ lineHeight: '1.8', color: '#ddd', fontSize: '1.1rem', marginBottom: '40px' }}>
+                        {contentBlocks}
+                    </div>
+
                     <hr style={{ borderColor: '#222', margin: '40px 0' }} />
 
                     <div style={{ marginBottom: '40px' }}>

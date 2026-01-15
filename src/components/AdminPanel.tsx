@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { deriveKey, computeKeyHash, decryptPayload } from '../utils/auth';
 import { useDatabase } from '../hooks/useDatabase';
@@ -6,7 +5,7 @@ import { AdminEditor } from './AdminEditor';
 import { AdminComments } from './AdminComments';
 import { AdminTerminal } from './AdminTerminal';
 import { AdminSettings } from './AdminSettings';
-import { motion } from 'framer-motion'; // Ensure framer-motion is installed
+import { motion } from 'framer-motion';
 
 export const AdminPanel: React.FC = () => {
     const { worker } = useDatabase();
@@ -90,10 +89,26 @@ export const AdminPanel: React.FC = () => {
             {/* CONTENT AREA */}
             <div style={{ flex: 1, overflowY: 'auto', background: '#0a0a0a', position: 'relative' }}>
                 <div style={{ padding: '20px', maxWidth: '1200px', margin: '0 auto', height: '100%', boxSizing: 'border-box' }}>
-                    {activeTab === 'editor' && <AdminEditor />}
-                    {activeTab === 'comments' && <AdminComments />}
-                    {activeTab === 'terminal' && <AdminTerminal />}
-                    {activeTab === 'settings' && <AdminSettings />}
+                    {/* 
+                       FIX: We use display: none instead of {condition && Component}.
+                       This keeps all components mounted, preserving their state
+                       and preventing the screen refresh/flicker.
+                    */}
+                    <div style={{ display: activeTab === 'editor' ? 'block' : 'none', height: '100%' }}>
+                        <AdminEditor />
+                    </div>
+                    
+                    <div style={{ display: activeTab === 'comments' ? 'block' : 'none', height: '100%' }}>
+                        <AdminComments />
+                    </div>
+
+                    <div style={{ display: activeTab === 'terminal' ? 'block' : 'none', height: '100%' }}>
+                        <AdminTerminal />
+                    </div>
+
+                    <div style={{ display: activeTab === 'settings' ? 'block' : 'none', height: '100%' }}>
+                        <AdminSettings />
+                    </div>
                 </div>
             </div>
         </div>
